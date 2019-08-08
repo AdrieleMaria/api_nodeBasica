@@ -7,12 +7,15 @@ const app = express()
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+const OPTIONS = { useNewUrlParser: true, useFindAndModify: false }
+const DB_URI = {uri: 'mongodb://localhost:27017/test'}
+
 
 const userRoutes = require('./routes/user-routes')
 
 mongoose.Promise = global.Promise
 
-mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true})
+mongoose.connect(DB_URI.uri, OPTIONS)
 .then(() => {
 	console.log('Banco iniciado com sucesso')
 }).catch(err => {

@@ -16,4 +16,7 @@ router.delete('/:userId', ctrl.deleteUser)
 //updateUser
 router.put('/:userId', ctrl.updateUser)
 
+//findById
+router.get('/:userId', ctrl.findOne)
+
 module.exports = router
