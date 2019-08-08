@@ -18,7 +18,7 @@ node server
 ```
 
 
-#Passos para uso da API - Postaman
+# Passos para uso da API - Postman
 
 1) Crie um usuário passando name, email e fone;
 
